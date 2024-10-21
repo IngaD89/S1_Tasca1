@@ -1,7 +1,7 @@
 package org.example.nivell_1.exercici2;
 
 public class Car {
-    private static final String brand = "Car Brand";
+    private static final String BRAND = "Car Brand";
     private static String model;
     private final double power;
 
@@ -16,7 +16,7 @@ public class Car {
     }
 
     public static String getBrand(){
-        return Car.brand;
+        return Car.BRAND;
     }
 
     public static String getModel() {
@@ -31,11 +31,11 @@ public class Car {
         return power;
     }
 
-    public static void frenar(){
+    public static void brakeCar(){
         System.out.println("El vehicle està accelerant");
     }
 
-    public void accelerar(){
+    public void accelerate(){
         System.out.println("El vehicle està accelerant");
     }
 }

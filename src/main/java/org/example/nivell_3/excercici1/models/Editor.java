@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class Editor {
     private String name;
     private final String DNI;
-    private double salary;
+    private static double salary;
     ArrayList<News> news;
 
     public Editor(String name, final String DNI) {
         this.name = name;
         this.DNI = DNI;
-        this.salary = 1500;
+        Editor.salary = 1500;
         news = new ArrayList<>();
     }
 
@@ -32,7 +32,7 @@ public class Editor {
     }
 
     public void setSalary(double salary) {
-        this.salary = salary;
+        Editor.salary = salary;
     }
 
     public ArrayList<News> getNews() {

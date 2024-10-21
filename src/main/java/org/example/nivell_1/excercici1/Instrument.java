@@ -4,6 +4,11 @@ public abstract class Instrument {
     private String name;
     private double price;
 
+    static {
+        System.out.println("Arrancando programa");
+
+    }
+
     public Instrument(String name, double price) {
         this.name = name;
         this.price = price;
