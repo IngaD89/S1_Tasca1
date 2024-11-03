@@ -186,24 +186,6 @@ public class EditorialManager {
         }
     }
 
-//    public void showNewsScore() {
-//        int editorId;
-//        int articleId;
-//        String dni;
-//        String title;
-//
-//        System.out.println("Introduce DNI de Redactor");
-//        dni = scanner.nextLine();
-//
-//        System.out.println("Introduce titulo de articulo");
-//        title = scanner.nextLine();
-//
-//        editorId = findEditor(dni);
-//        articleId = findArticle(editorId, title);
-//
-//        News news = editors.get(editorId).getNews().get(articleId);
-//        System.out.println("Puntiación del articulo es " + news.calcularPuntuacio());
-//    }
 
     public void showNewsScore() {
         System.out.println("Puntiación del articulo es " +
@@ -216,25 +198,6 @@ public class EditorialManager {
 
     }
 
-//    public void showNewsPrice() {
-//        int editorId;
-//        int articleId;
-//        String dni;
-//        String title;
-//
-//        System.out.println("Introduce DNI de Redactor");
-//        dni = scanner.nextLine();
-//
-//        System.out.println("Introduce titulo de articulo");
-//        title = scanner.nextLine();
-//
-//        editorId = findEditor(dni);
-//        articleId = findArticle(editorId, title);
-//
-//        News news = editors.get(editorId).getNews().get(articleId);
-//        System.out.println("El precio total de noticia es " + news.calcularPreuNoticia());
-//
-//    }
 
     private News requestDataFromUser() {
         int editorId;
