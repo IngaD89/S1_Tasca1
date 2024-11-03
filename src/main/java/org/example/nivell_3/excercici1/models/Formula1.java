@@ -3,6 +3,8 @@ package org.example.nivell_3.excercici1.models;
 public class Formula1 extends News {
 
     private String team;
+    private final String FERRARI = "Ferrari";
+    private final String MERCEDES = "Mercedes";
 
     public Formula1(String title, String team) {
         super(title);
@@ -23,8 +25,8 @@ public class Formula1 extends News {
     public double calcularPreuNoticia() {
         double totalPrice = super.getPrice();
 
-        if(team.equalsIgnoreCase("Ferrari")
-                || team.equalsIgnoreCase("Mercedes")
+        if(team.equalsIgnoreCase(this.FERRARI)
+                || team.equalsIgnoreCase(this.MERCEDES)
 
         ){
             totalPrice += 50;
@@ -38,8 +40,8 @@ public class Formula1 extends News {
 
         int totalScore = super.getScore();
 
-        if(team.equalsIgnoreCase("Ferrari")
-                || team.equalsIgnoreCase("Mercedes")
+        if(team.equalsIgnoreCase(this.FERRARI)
+                || team.equalsIgnoreCase(this.MERCEDES)
 
         ){
             totalScore += 2;
@@ -51,7 +53,7 @@ public class Formula1 extends News {
     @Override
     public String toString() {
         return "Formula1{" +
-                "team='" + team + '\'' +
+                "team='" + this.team + '\'' +
                 '}';
     }
 }

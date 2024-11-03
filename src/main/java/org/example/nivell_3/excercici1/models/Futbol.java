@@ -5,6 +5,12 @@ public class Futbol extends News {
     private String competitionName;
     private String club;
     private String player;
+    private final String LEAGUE_CHAMPIONS = "Lliga de Campions";
+    private final String LEAGUE = "Lliga";
+    private final String CLUB_BARCA = "Barça";
+    private final String CLUB_MADRID = "Madrid";
+    private final String PLAYER_FERRAN = "Ferran Torres";
+    private final String PLAYER_BENZEMA = "Benzema";
 
     public Futbol(
             String title,
@@ -47,15 +53,15 @@ public class Futbol extends News {
     @Override
     public double calcularPreuNoticia() {
         double totalPrice = super.getPrice();
-        if(competitionName.equalsIgnoreCase("Lliga de Campions")){
+        if(competitionName.equalsIgnoreCase(this.LEAGUE_CHAMPIONS)){
             totalPrice += 100;
         }
-        if (club.equalsIgnoreCase("Barça")
-                || club.equalsIgnoreCase("Madrid")) {
+        if (club.equalsIgnoreCase(this.CLUB_BARCA)
+                || club.equalsIgnoreCase(this.CLUB_MADRID)) {
             totalPrice += 100;
         }
-        if (player.equalsIgnoreCase("Ferran Torres")
-                || player.equalsIgnoreCase("Benzema")) {
+        if (player.equalsIgnoreCase(this.PLAYER_FERRAN)
+                || player.equalsIgnoreCase(this.PLAYER_BENZEMA)) {
             totalPrice += 50;
         }
         return totalPrice;
@@ -65,19 +71,19 @@ public class Futbol extends News {
     public int calcularPuntuacio() {
         int totalScore = super.getScore();
 
-        if(competitionName.equalsIgnoreCase("Lliga de Campions")){
+        if(competitionName.equalsIgnoreCase(this.LEAGUE_CHAMPIONS)){
             totalScore += 3;
         }
-        if(competitionName.equalsIgnoreCase("Lliga")){
+        if(competitionName.equalsIgnoreCase(this.LEAGUE)){
             totalScore += 2;
         }
-        if(club.equalsIgnoreCase("Barça")
-        || club.equalsIgnoreCase("Madrid")
+        if(club.equalsIgnoreCase(this.CLUB_BARCA)
+        || club.equalsIgnoreCase(this.CLUB_MADRID)
         ){
             totalScore += 1;
         }
-        if(player.equalsIgnoreCase("Ferran Torres")
-        || player.equalsIgnoreCase("Benzema")
+        if(player.equalsIgnoreCase(this.PLAYER_FERRAN)
+        || player.equalsIgnoreCase(this.PLAYER_BENZEMA)
         ){
             totalScore += 1;
         }
@@ -88,9 +94,9 @@ public class Futbol extends News {
     @Override
     public String toString() {
         return "Futbol{" +
-                "competitionName='" + competitionName + '\'' +
-                ", club='" + club + '\'' +
-                ", player='" + player + '\'' +
+                "competitionName='" + this.competitionName + '\'' +
+                ", club='" + this.club + '\'' +
+                ", player='" + this.player + '\'' +
                 '}';
     }
 }

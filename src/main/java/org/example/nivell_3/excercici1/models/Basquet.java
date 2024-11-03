@@ -4,6 +4,10 @@ public class Basquet extends News {
 
     private String competitionName;
     private String club;
+    private final String EURO_LEAGUE = "Eurolliga";
+    private final String COMPETITION = "ACB";
+    private final String CLUB_BARCA = "Barça";
+    private final String CLUB_MADRID = "Madrid";
 
     public Basquet(
             String title,
@@ -38,11 +42,11 @@ public class Basquet extends News {
 
         double totalPrice = super.getPrice();
 
-        if (competitionName.equalsIgnoreCase("Eurolliga")){
+        if (competitionName.equalsIgnoreCase(this.EURO_LEAGUE)){
             totalPrice += 75;
         }
-        if(club.equalsIgnoreCase("Barça")
-        || club.equalsIgnoreCase("Madrid")){
+        if(club.equalsIgnoreCase(this.CLUB_BARCA)
+        || club.equalsIgnoreCase(this.CLUB_MADRID)){
             totalPrice += 75;
         }
         return totalPrice;
@@ -53,14 +57,14 @@ public class Basquet extends News {
 
         int totalScore = super.getScore();
 
-        if(competitionName.equalsIgnoreCase("Eurolliga")){
+        if(competitionName.equalsIgnoreCase(this.EURO_LEAGUE)){
             totalScore += 3;
         }
-        if(competitionName.equalsIgnoreCase("ACB")){
+        if(competitionName.equalsIgnoreCase(this.COMPETITION)){
             totalScore += 2;
         }
-        if(club.equalsIgnoreCase("Barça")
-                || club.equalsIgnoreCase("Madrid")
+        if(club.equalsIgnoreCase(this.CLUB_BARCA)
+                || club.equalsIgnoreCase(this.CLUB_MADRID)
         ){
             totalScore += 1;
         }
@@ -70,8 +74,8 @@ public class Basquet extends News {
     @Override
     public String toString() {
         return "Basquet{" +
-                "competitionName='" + competitionName + '\'' +
-                ", club='" + club + '\'' +
+                "competitionName='" + this.competitionName + '\'' +
+                ", club='" + this.club + '\'' +
                 '}';
     }
 }

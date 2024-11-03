@@ -1,4 +1,4 @@
-package org.example.nivell_1.excercici1;
+package org.example.nivell_1.exercici1;
 
 public class StringInstrument extends Instrument{
     public StringInstrument(String name, double price) {

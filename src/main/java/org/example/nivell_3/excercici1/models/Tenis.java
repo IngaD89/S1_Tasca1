@@ -6,6 +6,9 @@ public class Tenis extends News {
 
     private String competitionName;
     private String player;
+    private final String PLAYER_FEDERER = "Federer";
+    private final String PLAYER_NADAL = "Nadal";
+    private final String PLAYER_DJOKOVIC = "Djokovic";
 
     public Tenis(
             String title,
@@ -40,9 +43,9 @@ public class Tenis extends News {
 
         double totalPrice = super.getPrice();
 
-        if(player.equalsIgnoreCase("Federer")
-                || player.equalsIgnoreCase("Nadal")
-                || player.equalsIgnoreCase("Djokovic")
+        if(player.equalsIgnoreCase(this.PLAYER_FEDERER)
+                || player.equalsIgnoreCase(this.PLAYER_NADAL)
+                || player.equalsIgnoreCase(this.PLAYER_DJOKOVIC)
 
         ){
             totalPrice += 100;
@@ -55,9 +58,9 @@ public class Tenis extends News {
 
         int totalScore = super.getScore();
 
-        if(player.equalsIgnoreCase("Federer")
-                || player.equalsIgnoreCase("Nadal")
-                || player.equalsIgnoreCase("Djokovic")
+        if(player.equalsIgnoreCase(this.PLAYER_FEDERER)
+                || player.equalsIgnoreCase(this.PLAYER_NADAL)
+                || player.equalsIgnoreCase(this.PLAYER_DJOKOVIC)
 
         ){
             totalScore += 3;
@@ -68,8 +71,8 @@ public class Tenis extends News {
     @Override
     public String toString() {
         return "Tenis{" +
-                "competitionName='" + competitionName + '\'' +
-                ", player='" + player + '\'' +
+                "competitionName='" + this.competitionName + '\'' +
+                ", player='" + this.player + '\'' +
                 '}';
     }
 }

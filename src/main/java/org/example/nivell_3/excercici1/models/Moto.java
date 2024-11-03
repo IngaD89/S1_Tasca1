@@ -3,6 +3,9 @@ package org.example.nivell_3.excercici1.models;
 public class Moto extends News {
     private String motoTeam;
 
+     private final String TEAM_HONDA = "Honda";
+     private final String TEAM_YAMAHA = "Yamaha";
+
     public Moto(String title, String motoTeam) {
         super(title);
         super.setPrice(100);
@@ -22,8 +25,8 @@ public class Moto extends News {
     public double calcularPreuNoticia() {
         double totalPrice = super.getPrice();
 
-        if(motoTeam.equalsIgnoreCase("Honda")
-                || motoTeam.equalsIgnoreCase("Yamaha")
+        if(motoTeam.equalsIgnoreCase(this.TEAM_HONDA)
+                || motoTeam.equalsIgnoreCase(this.TEAM_YAMAHA)
 
         ){
             totalPrice += 50;
@@ -36,8 +39,8 @@ public class Moto extends News {
     public int calcularPuntuacio() {
         int totalScore = super.getScore();
 
-        if(motoTeam.equalsIgnoreCase("Honda")
-                || motoTeam.equalsIgnoreCase("Yamaha")
+        if(motoTeam.equalsIgnoreCase(this.TEAM_HONDA)
+                || motoTeam.equalsIgnoreCase(this.TEAM_YAMAHA)
 
         ){
             totalScore += 3;
@@ -49,7 +52,7 @@ public class Moto extends News {
     @Override
     public String toString() {
         return "Moto{" +
-                "motoTeam='" + motoTeam + '\'' +
+                "motoTeam='" + this.motoTeam + '\'' +
                 '}';
     }
 }

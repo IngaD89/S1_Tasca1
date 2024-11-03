@@ -2,16 +2,10 @@ package org.example.nivell_1.exercici2;
 
 public class Car {
     private static final String BRAND = "Car Brand";
-    private static String model;
+    private static String model = "Modelo de coche";
     private final double power;
 
     public Car(double power) {
-        Car.model = "Modelo de coche";
-        this.power = power;
-    }
-
-    public Car(String model, double power) {
-        Car.model = model;
         this.power = power;
     }
 
